@@ -1,0 +1,12 @@
+---
+    -name: create a dockerfile
+     hosts: localhost
+     tasks:
+          
+          -name: build dockerimage
+           docker_image:
+             name: image:latest
+             build:
+                 path: /home/ec2-user/Project12/Dockerfile
+                 source: build
+             state: present
